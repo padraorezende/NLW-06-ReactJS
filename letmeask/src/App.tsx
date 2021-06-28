@@ -1,11 +1,10 @@
 import { Button } from './components/button';
+import { Home } from './pages/Home';
+import "./styles/global.scss";
 
 function App() {
   return (
-    <div>
-      <Button text="logar" />
-      <h1>Hello World</h1>
-    </div>
+    <Home />
   );
 }
 
