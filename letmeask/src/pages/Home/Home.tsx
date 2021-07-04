@@ -1,13 +1,13 @@
-import ilustrationImg from "../assets/illustration.svg";
-import logoImg from "../assets/logo.svg";
-import googleIconImg from "../assets/google-icon.svg";
-import "../styles/auth.scss";
+import ilustrationImg from "../../assets/illustration.svg";
+import logoImg from "../../assets/logo.svg";
+import googleIconImg from "../../assets/google-icon.svg";
+import "../../styles/auth.scss";
 import { useHistory } from "react-router";
-import { database } from "../service/firebase";
+import { database } from "../../service/firebase";
 import { FormEvent } from "react";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 import { useState } from "react";
-import { Button } from "../components/Button";
+import { Button } from "../../components/Button";
 
 export function Home() {
 
@@ -34,6 +34,11 @@ export function Home() {
 
         if (!roomRef.exists()) {
             alert("Room does not exist");
+            return;
+        }
+
+        if(roomRef.val().endedAt){
+            alert('Room already closed');
             return;
         }
 
