@@ -15,7 +15,7 @@ type FirebaseQuestions = Record<string, {
     }
     content: string;
     isHighLigthed: boolean;
-    isAnsewerded: boolean;
+    isAnsewered: boolean;
 
 }>
 
@@ -27,7 +27,7 @@ type Question = {
     }
     content: string;
     isHighLigthed: boolean;
-    isAnsewerded: boolean;
+    isAnsewered: boolean;
 }
 
 type RoomParams = {
@@ -55,7 +55,7 @@ export function Room() {
                     content: value.content,
                     author: value.author,
                     isHighLigthed: value.isHighLigthed,
-                    isAnsewerded: value.isAnsewerded,
+                    isAnsewered: value.isAnsewered
 
                 }
             })
@@ -84,7 +84,7 @@ export function Room() {
                 avatar: user.avatar,
             },
             isHighLigthed: false,
-            isAnsewerded: false
+            isAnsewered: false
         };
 
         await database.ref(`rooms/${roomId}/questions`).push(question);
