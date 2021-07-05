@@ -42,7 +42,7 @@ export function Home() {
             return;
         }
 
-        history.push(`room/${rommCode}`);
+        history.push(`rooms/${rommCode}`);
     }
 
     return (
