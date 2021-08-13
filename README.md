@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Letmeask" src="letmeask.github/logo.svg" width="160px">
+  <img alt="Letmeask" src="letmeask/.github/logo.svg" width="160px">
 </p>
 
 
